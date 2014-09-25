@@ -37,7 +37,7 @@ while True:
 
     # IP packets
     if eth_protocol != 8:
-	continue
+        continue
     # 20
     ip_header = struct.unpack('!BBHHHBBH4s4s', packet[eth_header_len:eth_header_len + 20])
     version = ip_header[0] >> 4
